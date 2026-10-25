@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillSwap Campus helps students teach and learn skills from one another.">
+  <title>SkillSwap Campus | Learn Together</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">SkillSwap<span>Campus</span></a>
+    <nav>
+      <a href="#explore">Explore Skills</a>
+      <a href="#how-it-works">How It Works</a>
+      <a class="nav-button" href="#share">Share a Skill</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</span>
+        <h1>Learn a skill.<br>Teach a skill.<br><span>Grow together.</span></h1>
+        <p>Connect with fellow students, exchange knowledge, and turn the skills you have into the skills someone else needs.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#explore">Explore Skills →</a>
+          <a class="button secondary" href="#share">Share Your Skill</a>
+        </div>
+        <div class="hero-note">Built for students, powered by students.</div>
+      </div>
+      <div class="hero-art">
+        <div class="art-circle"></div>
+        <div class="art-card card-one">
+          <span class="art-icon">💻</span>
+          <div><strong>Programming</strong><small>Share what you know</small></div>
+        </div>
+        <div class="art-card card-two">
+          <span class="art-icon">🎨</span>
+          <div><strong>Creative Design</strong><small>Discover something new</small></div>
+        </div>
+        <div class="art-card card-three">
+          <span class="art-icon">🤝</span>
+          <div><strong>Peer Learning</strong><small>Better together</small></div>
+        </div>
+        <div class="art-center">S<span>↔</span>S</div>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FIND YOUR NEXT SKILL</span>
+          <h2>Explore the community</h2>
+          <p>Find students who can teach you something new.</p>
+        </div>
+        <span class="count" id="skill-count">0 skills</span>
+      </div>
+
+      <div class="filters">
+        <input id="search-input" type="search" placeholder="Search skills, names or topics..." aria-label="Search skills">
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="All">All categories</option>
+          <option value="Technology">Technology</option>
+          <option value="Design">Design</option>
+          <option value="Communication">Communication</option>
+          <option value="Business">Business</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="skill-grid" id="skill-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No matching skills found. Try another search.</p>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <span class="eyebrow">SIMPLE BY DESIGN</span>
+      <h2>Learning works both ways.</h2>
+      <div class="steps">
+        <article class="step">
+          <span>01</span>
+          <h3>Discover</h3>
+          <p>Browse skills shared by students in your campus community.</p>
+        </article>
+        <article class="step">
+          <span>02</span>
+          <h3>Share</h3>
+          <p>Tell the community what you know or what you want to learn.</p>
+        </article>
+        <article class="step">
+          <span>03</span>
+          <h3>Connect</h3>
+          <p>Find learning opportunities and grow together through peer learning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="share-section" id="share">
+      <div>
+        <span class="eyebrow">ADD TO THE COMMUNITY</span>
+        <h2>Your next skill exchange starts here.</h2>
+        <p>Share a skill you can teach or a skill you want to learn.</p>
+      </div>
+
+      <form id="skill-form">
+        <label for="student-name">Your name</label>
+        <input id="student-name" name="studentName" maxlength="60" required placeholder="Enter your name">
+
+        <label for="skill-name">Skill name</label>
+        <input id="skill-name" name="skillName" maxlength="80" required placeholder="e.g. Python programming">
+
+        <label for="skill-category">Category</label>
+        <select id="skill-category" name="category" required>
+          <option value="">Choose a category</option>
+          <option value="Technology">Technology</option>
+          <option value="Design">Design</option>
+          <option value="Communication">Communication</option>
+          <option value="Business">Business</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="skill-type">I want to...</label>
+        <select id="skill-type" name="type" required>
+          <option value="Teach">Teach this skill</option>
+          <option value="Learn">Learn this skill</option>
+        </select>
+
+        <button class="button primary submit-button" type="submit">Add Skill Listing</button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#">SkillSwap<span>Campus</span></a>
+    <p>Knowledge grows when it is shared.</p>
+    <small>Student mini-project · DevOps and Kubernetes ISE-2</small>
+  </footer>
+</body>
+</html>
